@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>true</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_664961_issue_man_grc_issue</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>grc_issue_change_capture</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	gs.info("starting grc_issue change capture rule");
+	// Add your code here
+	// table fields from sys_dictionary
+	/*
+	var arr_fields = [];
+	var fields = new GlideRecord('sys_dictionary');
+	fields.addQuery('name', current.getTableName());
+	fields.addEncodedQuery('internal_type!=collection^ORinternal_type=NULL');
+	fields.query();
+	while (fields.next()) {
+		arr_fields.push(fields.element.toString());
+	}
+	*/
+	// table fields from object reflection
+	// Object.keys(current)
+	
+	// construct change capture object
+	var change = {
+		table: current.getTableName(),
+		operation: current.operation(),
+		current: {},
+		previous: {},
+		delta: {}
+	};
+	
+	// populate current and previous
+	for (var i in Object.keys(current)) {
+		var key = Object.keys(current)[i];
+		change.current[key] = current.getValue(key);
+		
+		// populate delta if previous exists
+		if (previous) {
+			if (current.getValue(key) != previous.getValue(key)) {
+				change.delta[key] = 1;
+			} else {
+				change.delta[key] = 0;
+			}
+		}
+	}
+	// previous doesn't exist for deletes
+	if (previous) {
+		for (var j in Object.keys(previous)) {
+			var pkey = Object.keys(previous)[j];
+			change.previous[pkey] = previous.getValue(pkey);
+		}
+	}
+	
+	if (current.operation() === "insert") {
+		gs.info("do insert");
+	} else if (current.operation() === "update") {
+		gs.info("do update");
+	} else if (current.operation() === "delete") {
+		gs.info("do delete");
+	} else {
+		gs.info("do " + current.operation());
+	}
+	gs.info(change);
+	gs.info(JSON.stringify(change));
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-27 16:59:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f8c1c6661b213010466ca9f6624bcbce</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>grc_issue_change_capture</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="issue_management" source="x_664961_issue_man">0d3ffd221b213010466ca9f6624bcb55</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="issue_management">0d3ffd221b213010466ca9f6624bcb55</sys_scope>
+        <sys_update_name>sys_script_f8c1c6661b213010466ca9f6624bcbce</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-27 19:04:49</sys_updated_on>
+        <template/>
+        <when>async</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=f8c1c6661b213010466ca9f6624bcbce"/>
+</record_update>

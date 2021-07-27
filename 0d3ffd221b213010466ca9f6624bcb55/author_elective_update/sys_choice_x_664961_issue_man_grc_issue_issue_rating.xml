@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="issue_rating" table="x_664961_issue_man_grc_issue" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>issue_rating</element>
+            <name>x_664961_issue_man_grc_issue</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-07-27 18:01:20</sys_created_on>
+            <sys_id>ae405eae1b213010466ca9f6624bcb37</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>issue_rating</sys_name>
+            <sys_package display_value="issue_management" source="x_664961_issue_man">0d3ffd221b213010466ca9f6624bcb55</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="issue_management">0d3ffd221b213010466ca9f6624bcb55</sys_scope>
+            <sys_update_name>sys_choice_x_664961_issue_man_grc_issue_issue_rating</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-07-27 18:01:20</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>issue_rating</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Low</label>
+            <language>en</language>
+            <name>x_664961_issue_man_grc_issue</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-07-27 18:01:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>26405eae1b213010466ca9f6624bcb37</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-07-27 18:01:20</sys_updated_on>
+            <value>low</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>issue_rating</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Medium</label>
+            <language>en</language>
+            <name>x_664961_issue_man_grc_issue</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-07-27 18:01:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ae405eae1b213010466ca9f6624bcb39</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-07-27 18:01:20</sys_updated_on>
+            <value>medium</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>issue_rating</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>High</label>
+            <language>en</language>
+            <name>x_664961_issue_man_grc_issue</name>
+            <sequence>2</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-07-27 18:01:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>22405eae1b213010466ca9f6624bcb3b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-07-27 18:01:20</sys_updated_on>
+            <value>high</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

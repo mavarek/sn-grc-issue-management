@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="grc_issue" max_length="40" name="x_664961_issue_man_grc_issue" type="collection">
-        <element choice="1" label="Issue Rating" max_length="40" name="issue_rating" type="choice">
-            <choice/>
+        <element choice="1" label="Issue Rating" mandatory="true" max_length="40" name="issue_rating" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Low" sequence="0" value="low"/>
+                <element inactive_on_update="false" label="Medium" sequence="1" value="medium"/>
+                <element inactive_on_update="false" label="High" sequence="2" value="high"/>
+            </choice>
         </element>
-        <element choice="1" label="Source" max_length="40" name="source" type="choice">
-            <choice/>
+        <element choice="1" label="Source" mandatory="true" max_length="40" name="source" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Audit" sequence="0" value="audit"/>
+                <element inactive_on_update="false" label="Complaints" sequence="1" value="complaints"/>
+                <element inactive_on_update="false" label="Consent Order" sequence="2" value="consent order"/>
+            </choice>
         </element>
     </element>
 </database>
