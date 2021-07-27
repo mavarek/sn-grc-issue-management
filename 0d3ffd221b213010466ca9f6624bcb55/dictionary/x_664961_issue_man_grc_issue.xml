@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="grc_issue" max_length="40" name="x_664961_issue_man_grc_issue" type="collection">
+        <element choice="1" label="Issue Rating" max_length="40" name="issue_rating" type="choice">
+            <choice/>
+        </element>
+        <element choice="1" label="Source" max_length="40" name="source" type="choice">
+            <choice/>
+        </element>
+    </element>
+</database>
